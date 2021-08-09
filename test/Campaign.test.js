@@ -101,8 +101,12 @@ describe('Campaigns', () => {
         balance = parseFloat(balance);
         console.log(balance);
         assert(balance > 99);//ganesh cli  我的剩下99? 
-    })
+    });
+
+   
     
+
+
     
 
 });

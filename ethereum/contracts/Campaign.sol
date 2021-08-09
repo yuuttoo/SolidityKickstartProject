@@ -83,6 +83,26 @@ contract Campaign {
         request.complete = true;
     }
 
+    
+
+    
+
+    function getSummary() public view returns (
+        uint, uint, uint, uint, address
+    ) {
+        return (
+            minimumContribution,
+            this.balance,
+            requests.length,
+            approversCount,
+            manager
+        );
+    }
+
+    function getRequestsCount() public view returns (uint) {
+        return requests.length;
+    }
+
 }
 
 // pragma solidity ^0.4.17;

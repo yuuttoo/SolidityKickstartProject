@@ -3,9 +3,13 @@ import Web3 from 'web3';
 //const web3 = new Web3(windows.web3.currentProvider);//nodejs 不會吃window 會error 所以根據寫condition
 let web3;
 
+
+
 if(typeof window !== 'undefined' && typeof window.web3 !== 'undefined') {//nodejs
     //we are in the broweser and metamask  is running.
-    web3 = new Web3(window.web3.currentProvider);
+    web3 = new Web3(window.web3.currentProvider);//.enable()
+    // window.web3.currentProvider.enable();
+    // web3 = new Web3(window.web3.currentProvider);
 } else { 
     //we are on the server &or user is not running  metamask 
     //we provide ourown provider
